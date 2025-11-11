@@ -47,9 +47,7 @@ COPY --chown=hop:hop ./resources/clone-git-repo.sh /home/hop/clone-git-repo.sh
 
 # Copy drivers
 COPY --chown=hop:hop ./resources/drivers/jtds-1.3.1.jar  /opt/hop/lib/core/
-COPY --chown=hop:hop ./resources/drivers/DatabricksJDBC42.jar  /opt/hop/lib/core/
 COPY --chown=hop:hop ./resources/drivers/jaybird-5.0.8.java11.jar  /opt/hop/lib/core/
-COPY --chown=hop:hop ./resources/drivers/proprietary/ojdbc11-23.2.0.0.jar  /opt/hop/lib/core/
 COPY --chown=hop:hop ./resources/drivers/mariadb-java-client-3.2.0.jar  /opt/hop/lib/core/
 
 
