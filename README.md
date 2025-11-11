@@ -44,6 +44,7 @@ no comando docker run
 
 # run with repo full
 
+```sh
 export HOP_DOCKER_IMAGE=ambientelivre/hop-custom-with-git:2.4.0
 export PROJECT_DEPLOYMENT_DIR=/home/hop/apache-hop-minimal-project
 
@@ -60,8 +61,13 @@ docker run -it --rm \
   --env GIT_REPO_NAME=apache-hop-minimal-project \
   --name my-simple-hop-container \
   ${HOP_DOCKER_IMAGE}
+```
   
 # run with repo branch
+
+```sh
+export HOP_DOCKER_IMAGE=ambientelivre/hop-custom-with-git:2.4.0 
+export PROJECT_DEPLOYMENT_DIR=/home/hop/apache-hop-minimal-project
 
 docker run -it --rm \
   --env HOP_LOG_LEVEL=Basic \
@@ -77,8 +83,14 @@ docker run -it --rm \
   --env GIT_REPO_BRANCH=main \
   --name my-simple-hop-container \
   ${HOP_DOCKER_IMAGE}  
+```
 
 # run with repo branch and sparse-checkout
+
+```sh
+export HOP_DOCKER_IMAGE=ambientelivre/hop-custom-with-git:2.4.0 
+export PROJECT_DEPLOYMENT_DIR=/home/hop/apache-hop-minimal-project
+
 
 docker run -it --rm \
   --env HOP_LOG_LEVEL=Basic \
@@ -95,12 +107,14 @@ docker run -it --rm \
   --env GIT_REPO_CLI=metadata \
   --name my-simple-hop-container \
   ${HOP_DOCKER_IMAGE}  
-
+```
 
 ## Importar uma Imagem do Docker Hub para Azure
 
+```sh
 az login
 az acr import --name SUAEMPRESA --source docker.io/ambientelivre/hop-custom-with-git:2.4.0 --image hop-custom-with-git:2.4.0
+```
 
 ## fazer o pull no Azure Registry 
 
