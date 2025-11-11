@@ -1,0 +1,24 @@
+{
+    {
+        "LocaleDefault" : "en_US",
+        "projectsConfig" : {
+          "enabled" : true,
+          "projectMandatory" : true,
+          "defaultProject" : "default",
+          "standardParentProject" : "default",
+          "projectConfigurations" : [ {
+            "projectName" : "default",
+            "projectHome" : "config/projects/default",
+            "configFilename" : "project-config.json"
+          }, {
+            "projectName" : "samples",
+            "projectHome" : "config/projects/samples",
+            "configFilename" : "project-config.json"
+          } ]
+        },
+        "azure" : {
+        "account" : "${AZURE_ACCOUNT_NAME}",
+        "key" : "${AZURE_ACCOUNT_KEY}",
+        "blockIncrement" : "4096"
+      }
+      }
