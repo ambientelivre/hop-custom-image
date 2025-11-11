@@ -1,11 +1,12 @@
 ### como baixar apenas um diretório do repositorio
 
+```sh
 git clone --no-checkout --filter=blob:none https://github.com/ambientelivre/samples_hop.git
 cd samples_hop/
 git sparse-checkout init --cone
 git sparse-checkout set unit_test
 git checkout
-
+```
 
 ##
 
