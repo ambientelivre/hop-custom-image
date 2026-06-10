@@ -117,4 +117,24 @@ docker tag ambientelivre/hop-custom-with-git:2.4.0 ambientelivre/hop-custom-with
 docker push ambientelivre/hop-custom-with-git:2.4.0 
 
 
+## Simple Run
+
+docker run -it --rm \
+  --env HOP_FILE_PATH='${PROJECT_HOME}/main.hwf' \
+  --env HOP_PROJECT_FOLDER=${PROJECT_DEPLOYMENT_DIR} \
+  --env HOP_PROJECT_NAME=apache-hop-minimum-project \
+  --env HOP_RUN_CONFIG=local \
+  --env HOP_CUSTOM_ENTRYPOINT_EXTENSION_SHELL_FILE_PATH=/home/hop/clone-git-repo.sh \
+  --env GIT_REPO_URI=https://github.com/diethardsteiner/apache-hop-minimal-project.git \
+  --env GIT_REPO_NAME=apache-hop-minimal-project \
+  --name my-simple-hop-container \
+  ${HOP_DOCKER_IMAGE}
+
+
+
+
+
+## Run in Airflow
+
+
 
